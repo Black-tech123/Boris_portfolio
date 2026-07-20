@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    max-width: 375px;
 }
 /*Remove the desktop menu*/
 .desktop-menu{
@@ -19,7 +20,7 @@ gap: 5px;
 }
 header {
     display: flex;
-    gap: 70%;
+    gap: 50%;
     background-color: #3c3a39;
     padding: 20px 10px;
 
@@ -28,4 +29,263 @@ header {
     color: white;
     font-size: 20px;
     text-decoration: none;
+}
+/*implementing mobile menu active mode*/
+.mobile-menu.active p:nth-child(1){
+rotate: 45deg;
+position: relative;
+top: 9px;
+}
+.mobile-menu.active p:nth-child(2){
+background: transparent;
+}
+.mobile-menu.active p:nth-child(3){
+rotate: -45deg;
+position: relative;
+top: -9px;
+}
+/*display desktop menu during active state */
+.desktop-menu.active{
+display: block;
+}
+.desktop-menu.active li:nth-child(4){
+    display: none;
+}
+
+.desktop-menu.active{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    position: fixed;
+    z-index: 1000;
+    background-color: #3c3a39;
+    left: 0;
+    width: 100%;
+    padding: 100px 10px;
+}
+.desktop-menu.active li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    border-bottom: 1px solid grey;
+}
+    /*HERO SECTION STYLING FOR MOBILE*/
+    .desktop-icons,.hero-desk-bg{
+        display: none;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #1c1a19;
+    padding: 120px 0 150px 15px;
+}
+.greetings{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.hero h1{
+    color: #ff6b00;
+    font-size: 56px;
+}
+.hero h2{
+    color:#fff ;
+    font-size:  30px;
+}
+.hero p{
+    color: #fff;
+    font-size: 18px;
+}
+.mobile-icons ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+.mobile-icons ul li a img{
+    width: 50px;
+}
+.hero-bg{
+    display: flex;
+    justify-content: end;
+    margin-top: -250px;
+
+}
+/*PROJECT SECTION STYLING FOR MOBILE*/
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.projects_heading{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.projects_heading h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+.projects_heading p{
+    padding: 1px 15px;
+    background-color: grey;
+}
+.iso_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 327px;
+}
+.iso_card h3{
+    font-size: 30px;
+}
+.iso_card p{
+    font-size: 20px;
+}
+.iso_card ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+.iso_card ul li{
+    border: 1px solid;
+    padding: 5px 10px;
+}
+.iso_card button{
+    background-color: #ff6b00;
+    color: #fff;
+    width: 110px;
+    font-size: 20px;
+    border: none;
+    padding: 10px 0;
+}
+.sim_cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.sim_card{
+    width: 372px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/similar_bg.svg);
+    padding-top: 10px;
+}
+.sim_card h3{
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+.sim_card p{
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+.sim_card ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+.sim_card ul li{
+    color: #fff;
+    border: 1px solid;
+    padding: 5px;
+    background-color: grey;
+    opacity: 60%;
+}
+.sim_card button{
+    background-color: #ff6b00;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    bottom: 0;
+    margin-top: 200px;
+    border: none;
+}
+/*ADD ABOUT SECTION STYLING FOR MOBILE*/
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1c1a19;
+    gap: 40px;
+}
+.solo_card{
+    width: 370px;
+}
+.solo_card_txt{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+}
+.solo_card_txt h3{
+    font-size: 52px;
+    color: #ff6b00;
+}
+.solo_card_txt p{
+    font-size: 20px;
+    color: #fff;
+}
+.solo_card_txt button{
+    background-color: #ff6b00;
+    border:none;
+    color: #fff;
+    padding: 10px;
+    width: 150px;
+    font-size: 18;
+}
+.solo_card_img{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.solo_card_img p{
+    padding: 1px;
+    background-color: grey;
+    width: 100%;
+}
+.multi_cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.multi_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 327px;
+    color: #fff;
+    gap: 30px;
+}
+.multi_card span{
+    display: flex;
+    gap: 10px;
+}
+.multi_card span h3{
+    font-size: 25px;
+}
+.multi_card ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+.multi_card ul li{
+    font-size: 20px;
 }
