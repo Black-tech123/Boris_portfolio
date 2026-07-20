@@ -1,60 +1,58 @@
 *{
     margin: 0;
     padding: 0;
-    max-width: 375px;
 }
-/*Remove the desktop menu*/
+/*remove desktop menu*/
 .desktop-menu{
-display: none;
+    display: none;
 }
 /*style the mobile menu*/
 .mobile-menu{
 display: flex;
+justify-content: end;
 flex-direction: column;
 gap: 5px;
 }
 .mobile-menu p{
     background-color: white;
     padding: 2px 10px;
-
 }
-header {
-    display: flex;
-    gap: 50%;
-    background-color: #3c3a39;
-    padding: 20px 10px;
-
+header{
+   display: flex;
+   gap: 72%;
+   background-color: #3c3a39;
+   padding: 20px 10px;
 }
 .logo a{
     color: white;
     font-size: 20px;
     text-decoration: none;
 }
-/*implementing mobile menu active mode*/
+/*implementingmobile menu active mode*/
 .mobile-menu.active p:nth-child(1){
-rotate: 45deg;
-position: relative;
-top: 9px;
+   rotate: 45deg;
+   position: relative;
+   bottom: -9px;
 }
 .mobile-menu.active p:nth-child(2){
-background: transparent;
+   background: transparent;
 }
 .mobile-menu.active p:nth-child(3){
-rotate: -45deg;
-position: relative;
-top: -9px;
+   rotate: -45deg;
+   position: relative;
+   top: -9px;
 }
-/*display desktop menu during active state */
+/*implementing desktop menu active mode*/
 .desktop-menu.active{
-display: block;
+    display: block;
 }
 .desktop-menu.active li:nth-child(4){
     display: none;
 }
 
-.desktop-menu.active{
+.desktop-menu.active{ 
     display: flex;
-    height: 325px;
+    height: 448px;
     flex-direction: column;
     gap: 20px;
     list-style: none;
@@ -66,54 +64,58 @@ display: block;
     padding: 100px 10px;
 }
 .desktop-menu.active li a{
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 30px;
     border-bottom: 1px solid grey;
 }
-    /*HERO SECTION STYLING FOR MOBILE*/
-    .desktop-icons,.hero-desk-bg{
-        display: none;
+/*hero section styling for mobile*/
+.desktop-icons,.hero-desk-bg{
+    display: none;
 }
 .hero{
     display: flex;
     flex-direction: column;
     gap: 20px;
     background-color: #1c1a19;
-    padding: 120px 0 150px 15px;
-}
+    padding: 120px 0px 15px;
+}                       
 .greetings{
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
+}   
 .hero h1{
-    color: #ff6b00;
     font-size: 56px;
-}
+    color: #ff6b00;
+} 
 .hero h2{
-    color:#fff ;
-    font-size:  30px;
+    color: #fff;
+    font-size: 30px;
 }
 .hero p{
-    color: #fff;
+    color: white;
     font-size: 18px;
-}
+} 
 .mobile-icons ul{
     display: flex;
     list-style: none;
     gap: 10px;
 }
-.mobile-icons ul li a img{
+.hero-bg{
+ display: flex;
+ justify-content: end;
+ margin-top: -250px;   
+}
+.mobile-icon ul li a img{
     width: 50px;
 }
 .hero-bg{
     display: flex;
     justify-content: end;
     margin-top: -250px;
-
 }
-/*PROJECT SECTION STYLING FOR MOBILE*/
+/*projects section styling for mobile*/
 .projects{
     display: flex;
     flex-direction: column;
@@ -132,14 +134,16 @@ display: block;
 }
 .projects_heading p{
     padding: 1px 15px;
-    background-color: grey;
+    background-color: gray;
 }
 .iso_card{
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
     width: 327px;
+    border-bottom-right-radius: 20px;/*personal touch*/
 }
 .iso_card h3{
     font-size: 30px;
@@ -149,10 +153,10 @@ display: block;
 }
 .iso_card ul{
     display: flex;
+    list-style: none;
+    gap: 10px;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    list-style: none;
 }
 .iso_card ul li{
     border: 1px solid;
@@ -160,11 +164,12 @@ display: block;
 }
 .iso_card button{
     background-color: #ff6b00;
-    color: #fff;
+    color: white;
     width: 110px;
     font-size: 20px;
     border: none;
     padding: 10px 0;
+    border-top-right-radius: 15px;
 }
 .sim_cards{
     display: flex;
@@ -174,19 +179,21 @@ display: block;
     gap: 20px;
 }
 .sim_card{
-    width: 372px;
+    border: 1px solid black;
+    width: 327px;
     height: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     background: url(../images/similar_bg.svg);
-    padding-top: 10px;
+    gap: 15px;
+    align-items: center;
 }
 .sim_card h3{
     font-size: 30px;
     text-align: center;
-    color: #fff;
+    font-size: 18px;
+    list-style: none;
 }
 .sim_card p{
     color: #fff;
@@ -197,25 +204,31 @@ display: block;
     display: flex;
     gap: 10px;
     list-style: none;
+    
+}
+.sim_card ul{
+    display: flex;
+    gap: 10px;
+    list-style: 18px;
 }
 .sim_card ul li{
-    color: #fff;
     border: 1px solid;
     padding: 5px;
+    color: #fff;
     background-color: grey;
     opacity: 60%;
 }
 .sim_card button{
     background-color: #ff6b00;
-    color: #fff;
-    padding: 10px;
-    font-size: 18px;
+    color: white;
     width: 100%;
-    bottom: 0;
-    margin-top: 200px;
+    font-size: 18px;
     border: none;
+    padding: 10px;
+    margin-top: 170px;
+    bottom: 0;
 }
-/*ADD ABOUT SECTION STYLING FOR MOBILE*/
+/*add about section styling for mobile*/
 .about{
     display: flex;
     flex-direction: column;
@@ -223,9 +236,10 @@ display: block;
     justify-content: center;
     background: #1c1a19;
     gap: 40px;
+    padding: 50px 10px ;
 }
 .solo_card{
-    width: 370px;
+   border: 370px;
 }
 .solo_card_txt{
     display: flex;
@@ -243,11 +257,12 @@ display: block;
 }
 .solo_card_txt button{
     background-color: #ff6b00;
-    border:none;
+    border: none;
     color: #fff;
     padding: 10px;
     width: 150px;
-    font-size: 18;
+    font-size: 18px;
+  
 }
 .solo_card_img{
     display: flex;
@@ -256,7 +271,7 @@ display: block;
 }
 .solo_card_img p{
     padding: 1px;
-    background-color: grey;
+    background-color: gray;
     width: 100%;
 }
 .multi_cards{
@@ -289,3 +304,64 @@ display: block;
 .multi_card ul li{
     font-size: 20px;
 }
+/*contact section styling*/
+.contact_me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 40px 60px;
+    background-color: #fff;
+}
+.contact_me p{
+    font-size: 32px;
+    font-weight: 700;
+    color: #172b4d;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contact-form input,
+.contact-form textarea{
+    border: none;
+    border-bottom: 1px solid #dbd8d7;
+    padding: 12px 0;
+    font-size: 16px;
+    outline: none;
+    font-family: inherit;
+}
+.contact-form textarea{
+    border: 1px solid #dbd8d7;
+    border-radius: 4px;
+    padding: 10px;
+    resize: vertical;
+}
+.contact-form textarea::placeholder{
+    color: #979493;
+}
+.contact-form button{
+    background-color: #ff6b00;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    width: fit-content;
+    font-size: 17px;
+    cursor: pointer;
+    align-self: center;
+  
+}
+
+.iso_card ul li{
+    border-radius: 5px 0;
+}
+.sim_card ul li{
+    border-radius: 5px 0;
+    background: #ff6b00;
+}
+.sim_card{
+  border-radius: 20px 0;  
+}
+  
