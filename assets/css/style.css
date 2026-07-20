@@ -54,7 +54,7 @@ display: block;
 
 .desktop-menu.active{
     display: flex;
-    height: 100vh;
+    height: 325px;
     flex-direction: column;
     gap: 20px;
     list-style: none;
